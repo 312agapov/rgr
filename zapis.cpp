@@ -1,8 +1,8 @@
 #include "zapis.h"
 #include <string>
 zapis::zapis() {
-	name = "Леонид";
-	sname = "Агапов";
+	name = "Р›РµРѕРЅРёРґ";
+	sname = "РђРіР°РїРѕРІ";
 	number = "89063060585";
 }
 zapis::zapis(string _name, string _sname, string _number) {
