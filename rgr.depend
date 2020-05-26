@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1589816417 source:c:\users\leonid\desktop\rgr\main.cpp
+	"zapis.h"
+	<string>
+	<cstdio>
+	<fstream>
+	<vector>
+
+1589009519 c:\users\leonid\desktop\rgr\zapis.h
+	<iostream>
+	<windows.h>
+	<string>
+
+1588951891 source:c:\users\leonid\desktop\rgr\zapis.cpp
+	"zapis.h"
+	<string>
+
+1590480295 source:c:\users\leonid\desktop\rgr1\main.cpp
+	"zapis.h"
+	<string>
+	<fstream>
+	<vector>
+
+1590165716 c:\users\leonid\desktop\rgr1\zapis.h
+	<iostream>
+	<windows.h>
+	<string>
+
+1590163518 source:c:\users\leonid\desktop\rgr1\zapis.cpp
+	"zapis.h"
+	<string>
+
