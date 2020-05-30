@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <windows.h>
 using namespace std;
 
 int main() {
@@ -19,18 +20,18 @@ int main() {
 
 	zapis phone;
 	while(true){
-		cout << "Нажмите 1 чтобы ввести данные \n";
-		cout << "Нажмите 2 чтобы посмотреть введенные данные \n";
-		cout << "Нажмите 3 чтобы посмотреть все данные\n";
-		cout << "Нажмите 4 чтобы осуществить поиск\n";
-		cout << "Нажмите 5 чтобы изменить контакт\n";
-		cout << "Нажмите 6 чтобы очистить файл\n";
-		cout << "Нажмите 7 чтобы удалить контакт\n";
-		cout << "Нажмите 8 чтобы выйти\n";
-		cin >> a;
+            cout << "Nazhmite 1 chtoby vvesti dannye \n";
+            cout << "Nazhmite 2 chtoby posmotret' vvedennye dannye \n";
+            cout << "Nazhmite 3 chtoby posmotret' vse dannye\n";
+            cout << "Nazhmite 4 chtoby osushchestvit' poisk\n";
+            cout << "Nazhmite 5 chtoby izmenit' kontakt\n";
+            cout << "Nazhmite 6 chtoby ochistit' fajl\n";
+            cout << "Nazhmite 7 chtoby udalit' kontakt\n";
+            cout << "Nazhmite 8 chtoby vyjti\n";
+            cin >> a;
 
 		if (a == 1) {
-			cout << "Введите имя : ";
+			cout << "Vvedite imya : ";
 			cin >> name;
 			phone.SetName(name);
 
@@ -40,7 +41,7 @@ int main() {
             fout << "\n";
             fout.close();
 
-			cout << "Введите фамилию : ";
+			cout << "Vvedite familiu : ";
 			cin >> sname;
 			phone.SetSname(sname);
 
@@ -49,7 +50,7 @@ int main() {
             fout << "\n";
             fout.close();
 
-			cout << "Введите номер : ";
+			cout << "Vvedite nomer : ";
 			cin >> number;
 			phone.SetNumber(number);
 
@@ -61,7 +62,7 @@ int main() {
 
 		if (a == 2)
             {
-            cout << "Контакт" << endl;
+            cout << "Kontakt" << endl;
 			phone.print();
             }
 
@@ -79,8 +80,9 @@ int main() {
         {
             ifstream in;
             in.open("phonebook.txt");
-            cout << "Ведите имя, фамилию или номер для поиска" << endl;
+            cout << "Vvedite imya, familiu ili nomer dlya poiska" << endl;
             cin >> poisk;
+            cout << "********" << endl;
             vector <string> mass;
             int cunt = 0;
 
@@ -121,8 +123,9 @@ int main() {
         if (a == 5)
         {
             string line;
-            cout << "Ведите имя, фамилию или номер для поиска" << endl;
+            cout << "Vvedite imya, familiu ili nomer dlya poiska" << endl;
             cin >> poisk;
+            cout << "********" << endl;
             vector <string> mass;
             int cunt = 0;
             ifstream text("phonebook.txt");
@@ -148,7 +151,7 @@ int main() {
                         {
                             cout << mass[i] << endl;
                         }
-                        cout << "Изменить данный контакт? 1-нет 2-да\n";
+                        cout << "Izmenit' dannyi kontakt? 1-net 2-da\n";
                         int f;
                         cin >> f;
                         if(f==1)
@@ -164,13 +167,13 @@ int main() {
                         if(f==2)
                         {
                           string ss;
-                          cout << "Введите измененное имя" << endl;
+                          cout << "Vvedite izmenennoe imya" << endl;
                           cin >> ss;
                           buffer << ss << endl;
-                          cout << "Введите измененную фамилию" << endl;
+                          cout << "Vvedite izmenennyu familiu" << endl;
                           cin >> ss;
                           buffer << ss << endl;
-                          cout << "Введите измененный номер" << endl;
+                          cout << "Vvedite izmenennyu nomer" << endl;
                           cin >> ss;
                           buffer << ss << endl;
                           buffer << "------------------------------" <<  endl;
@@ -205,7 +208,7 @@ int main() {
         if (a == 7)
         {
             string line;
-            cout << "Ведите имя, фамилию или номер для поиска" << endl;
+            cout << "Vvedite imya, familiu ili nomer dlya poiska" << endl;
             cin >> poisk;
             vector <string> mass;
             int cunt = 0;
@@ -232,7 +235,7 @@ int main() {
                         {
                             cout << mass[i] << endl;
                         }
-                        cout << "Удалить данный контакт? 1-нет 2-да\n";
+                        cout << "Ydalit' dannyi kantakt? 1-net 2-da\n";
                         int f;
                         cin >> f;
                         if(f==1)
